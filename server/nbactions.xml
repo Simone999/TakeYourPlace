@@ -1,0 +1,27 @@
+<?xml version="1.0" encoding="UTF-8"?>
+<actions>
+        <action>
+            <actionName>run</actionName>
+            <packagings>
+                <packaging>war</packaging>
+                <packaging>ear</packaging>
+                <packaging>ejb</packaging>
+            </packagings>
+            <properties>
+                <netbeans.deploy>true</netbeans.deploy>
+            </properties>
+        </action>
+        <action>
+            <actionName>CUSTOM-Run jetty</actionName>
+            <displayName>Run jetty</displayName>
+            <goals>
+                <goal>-Djetty.reload=automatic</goal>
+                <goal>-Djetty.scanIntervalSeconds=2</goal>
+                <goal>jetty:run</goal>
+                <goal>-Dorg.eclipse.jetty.annotations.maxWait=900</goal>
+                
+            </goals>
+        </action>
+        
+        
+    </actions>
